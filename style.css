@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: hsl(233, 47%, 7%);
+}
+.container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 90%;
+  max-width: 930px;
+}
+.info {
+  width: 600px;
+  background-color: hsl(244, 38%, 16%);
+  padding: 3rem;
+  border-radius: 10px 0 0 10px;
+}
+.info h1 {
+  font-size: 2.3rem;
+  font-family: "Inter", sans-serif;
+}
+h1 span {
+    color: hsl(277, 64%, 61%);
+}
+.info p {
+  margin: 1.5rem 0 2rem 0;
+  line-height: 1.7;
+  width: 90%;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat b {
+    font-size: 1.3rem;
+}
+.stat span {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.image {
+  display: flex;
+}
+.image {
+    position: relative;
+    /* display: inline-block; */
+  }
+  
+  .image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 1; /* Adjust the opacity as desired */
+    border-radius: 0 10px 10px 0;
+  }
+  
+  .image img {
+    filter: grayscale(100%);
+    mix-blend-mode: multiply;
+    width: 400px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  @media screen and (max-width:970px) {
+    .container {
+        flex-direction: column-reverse;
+        margin: 1rem 2rem;
+    }
+    .image img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .image::before {
+        border-radius: 10px 10px 0 0;
+    }
+    .info {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+        padding: 1.3rem;
+    }
+    .info h1 {
+        font-size: 1.8rem;
+    }
+    .info p {
+        width: 100%;
+    }
+    .stats {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 2rem;
+    }
+  }
+  
